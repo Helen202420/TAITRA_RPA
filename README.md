@@ -7,7 +7,7 @@
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)](#)
 
 
----
+
 
 ## ✨ 主要功能
 - 📥 **Graph 檔案下載**：App-only（Client Credentials）流程，支援匿名下載連結或 `/content` 保護端點
@@ -15,7 +15,7 @@
 - 🧩 **模組化**：`automation/graph_client.py`（下載）、`automation/dsm_uploader.py`（上傳）
 - 🔐 **祕密管理**：`.env` / `.env.example`，避免把密碼推上 GitHub
 
----
+
 
 ## 🗂 專案結構
 ```
@@ -45,7 +45,7 @@ Set-ExecutionPolicy -Scope Process Bypass
 pip install msal requests selenium webdriver-manager python-dotenv
 ```
 
----
+
 
 ## 🔐 建立 .env（不要上傳到 Git）
 ```dotenv
@@ -62,7 +62,7 @@ DSM_PASSWORD=
 ```
 > 提示：`.env.example` 可上傳，請保留空值給使用者自行填寫。
 
----
+
 
 ## ▶️ 執行
 ```bash
@@ -70,7 +70,7 @@ python main.py
 ```
 流程：**Graph 下載 → 存到 `download/` → Selenium 登入 DSM → 上傳（覆寫）**。
 
----
+
 
 ## 🧭 工作流程（Mermaid）
 ```mermaid
@@ -86,7 +86,7 @@ flowchart TD
   H --> I[完成 ✅]
 ```
 
----
+
 
 ## 🧹 故障排除（FAQ）
 - 🔑 **`invalid_client (AADSTS7000215)`**：你填了 Secret **ID**，請改填 Secret **Value**。
@@ -94,14 +94,14 @@ flowchart TD
 - 🔍 **Selenium 找不到元素**：確認使用 `presence_of_element_located`，並適度拉長等待秒數。
 - 🔐 **GitHub 推不上去（GH013）**：歷史含祕密 → 移除密碼檔並重置 Git 歷史，並旋轉（重建）外洩金鑰。
 
----
+
 
 ## 🔒 安全建議
 - `.env`、`download/`、`.venv/`、`__pycache__/` **一定要在 `.gitignore`**
 - `config.py` **不**要預設任何祕密值，只讀環境變數
 - 若曾把金鑰推上遠端：**撤銷/重建** 金鑰 + **清 Git 歷史**
 
----
+
 
 ## 🗺 後續規劃
 - 直接改用 Graph 上傳（取代部分 Selenium）
