@@ -6,6 +6,7 @@
 [![MSAL](https://img.shields.io/badge/Azure%20AD-MSAL-blueviolet.svg)](https://learn.microsoft.com/azure/active-directory/develop/)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)](#)
 
+
 ---
 
 ## ✨ 主要功能
