@@ -1,13 +1,10 @@
 # 🚀 TAITRA RPA  
-**Graph 下載 + Synology DSM 上傳 — 以 MSAL 取得 App-only Token 自動下載檔案，並由 Selenium 登入 DSM 的 File Station（manager.change）執行上傳覆寫；所有祕密以 .env 管理，模組化設計可排程無人值守。**
+> Graph 下載 + Synology DSM 上傳 — 以 MSAL 取得 App-only Token 自動下載檔案，並由 Selenium 登入 DSM 的 File Station（manager.change）執行上傳覆寫；所有祕密以 .env 管理，模組化設計可排程無人值守。**
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![Selenium](https://img.shields.io/badge/Selenium-4.x-green.svg)](https://www.selenium.dev/)
 [![MSAL](https://img.shields.io/badge/Azure%20AD-MSAL-blueviolet.svg)](https://learn.microsoft.com/azure/active-directory/develop/)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)](#)
-
-自動從 **Microsoft Graph** 下載檔案，並以 **Selenium** 登入 **Synology DSM** 在 File Station 的 `manager.change` 進行「上傳－覆寫」。  
-重點：祕密只放 `.env`，程式碼不留金鑰/密碼。
 
 ---
 
