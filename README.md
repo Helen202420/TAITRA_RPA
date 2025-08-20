@@ -76,7 +76,7 @@ python main.py
 
 ## 🧭 工作流程（Mermaid）
 ```mermaid
-flowchart LR
+flowchart TD
   A[MSAL 取得 App-only Token] --> B[查詢檔案中繼資料]
   B --> C{有 @microsoft.graph.downloadUrl?}
   C -- 是 --> D[匿名下載到 download/]
